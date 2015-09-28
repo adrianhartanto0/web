@@ -2,36 +2,73 @@
 	<head>
 	   <title>MacPy | AE2GRP - CH</title>
 	   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	   <script src="js/jquery-1.11.3.min.js"></script>
+	   <script src="js/index.js"></script>
 	   <link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 
 	<body>
 	   <div class="container">
 	   		<div class="col-md-12 top">
+	   			<div class="header">
+	   				<div class="left title">
+	   					<p>AE2GRP-CH</p>
+	   				</div>
+	   				<div class="right">
+	   					<div class="menu">
+	   						<p class="choice">Details</p>
+	   					</div>
+	   				</div>
+	   			</div>
 	   		</div>
 	   		<div class="col-md-12 bottom">
 	   			<div class="btn-group" role="group" aria-label="...">
 	   			   	<div class="nav-content selected">
-  						<div type="button" class="btn btn-default ">Project Description</div>
+  						<div type="button" id="project" class="btn btn-default">Project Description</div>
   						<div class="item-content"> </div>
   					</div>
   					<div class="nav-content">
-  						<div type="button" class="btn btn-default">Team Members &amp; Supervisor</div>
+  						<div type="button" id="team" class="btn btn-default">Team Members &amp; Supervisor</div>
   						<div class="item-content"></div>
   					</div>
   					<div class="nav-content">
-  						<div type="button" class="btn btn-default">Deliverables</div>
+  						<div type="button" id="deliverable" class="btn btn-default">Deliverables</div>
   						<div class="item-content"></div>
   					</div>
 				</div>
 				<div class="capsule-content">
-					<p class="project-description content">
+					<div class="project-description content visible1">
 						The group project involves the entire process of game concept, design, server setup, documentation, modelling,
 animation, programming, testing and deployment. The requirement for the final game is that it needs to be
 networked via a game server. The genre of the game is decided by the student group. There are various
 platforms available which students can use, but the Unity3D IDE is recommended.
-					</p>
-					<p>
+					</div>
+					<div class="members content hidden1">
+						<div class="member">
+							<img src="resources/ben.jpg" />
+							<p>YANG Yaowen </p>
+						</div>
+						<div class="member">
+							<img src="resources/kaiyu.jpg" />
+							<p>ZHAO Kaiyu </p>
+						</div>
+						<div class="member">
+							<img src="resources/sylvia.jpg" />
+							<p>ZHANG Siyu </p>
+						</div>
+						<div class="member">
+							<img src="resources/mandy.jpg" />
+							<p>XIE Meng </p>
+						</div>
+						<div class="member">
+							<img src="resources/adrian.jpg" />
+							<p>Adrian Hartanto </p>
+						</div>
+					</div>
+					<div class="deliverables content hidden1">
+
+					</div>
+
   				</div>
 	   		</div>
 	   </div>

@@ -1,26 +1,34 @@
 $(document).ready(function(){
-
+   
+   var selected;
 	var contentMap = {
 		team:'.members',
 		project:'.project-description',
-		deliverable:'.deliverables'
+		deliverables:'.deliverables',
+		minutes:'.minutes'
 	}
 
 	function changeContent(content){
-		$(".visible1").removeAttr("style");
-		$(".visible1").addClass("hidden1");
-		$(".visible1").removeClass("visible1");
-		$(content).animate({opacity:1.0},800,function(){});
-		$(content).addClass("visible1");
-		$(content).removeClass("hidden1");
+
+		var bottomTopPosition = $(contentMap[content]).offset().top;	
+		if(selected == undefined){
+				console.log("asdasd");
+				selected = contentMap[content];
+		}else{
+				$(selected).css("background","none");		
+		
+		}
+		$(contentMap[content]).css("background","rgba(39,117,82,0.5)");
+		selected = contentMap[content];
+		$("html body").animate({
+				scrollTop:bottomTopPosition
+		},1000,function () {});
+		
 	}
 
-	$(".btn").on("click",function(){
-		$(".selected").removeClass("selected");
-		$(this).addClass("selected");
-		var attr = $(this).attr("id");
-		changeContent(contentMap[attr]);
-
+	$(".tab-link").on("click",function(){
+				console.log($(this).attr("id"));
+				changeContent($(this).attr("id"));
 	})
 
 
